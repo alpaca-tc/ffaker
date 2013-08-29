@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ffaker_custom'
-  s.version     = '0.1'
+  s.version     = '0.2'
   s.authors     = ['alpaca-tc']
   s.email       = ['alprhcp666@gmail.com']
   s.homepage    = ''
