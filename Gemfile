@@ -1,0 +1,2 @@
+gem 'ffaker'
+gem 'rspec'

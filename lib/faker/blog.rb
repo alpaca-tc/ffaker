@@ -1,32 +1,22 @@
-require 'faker/utils/module_utils'
-
-module Faker::CompanyJA
+module Faker::Blog
   extend self
   extend ::Faker::ModuleUtils
 
-  def company_name(n = nil)
-    fill_in_string COMPANY_NAME.sample, n
-  end
-
   def article(n = nil)
-    fill_in_string BLOG_TEXT.sample, n
+    fill_in_string(BLOG_TEXT.sample, n)
   end
 
   def article_title(n = nil)
-    fill_in_string BLOG_TEXT.sample[ :title ], n
+    fill_in_string(BLOG_TEXT.sample[:title], n)
   end
 
   def article_keywords(n = nil)
-    fill_in_string BLOG_TEXT.sample[ :keywords ], n
+    fill_in_string(BLOG_TEXT.sample[:keywords], n)
   end
 
   def article_body(n = nil)
-    fill_in_string BLOG_TEXT.sample[ :body ], n
+    fill_in_string(BLOG_TEXT.sample[:body], n)
   end
-
-  COMPANY_NAME = %w[# {{{
-    鍋屋バイテック IHI 日立造船 NEC 田中伊雅佛具店 朱宮神仏具店 木村新造装束店 永松仏具店 佐藤葬具店（佐藤造花店） 安田念珠店（数珠） 井筒(法衣・装束) 日本堂 泉屋(仏壇店) 小堀 (仏壇・仏具) 安田松慶堂 浜屋 赤澤朝陽 永樂屋 柳瀬仏壇 三村松 三上装束店 ずヾや 中原三法堂 永田や仏壇店 小津産業 日本香堂 浅野太鼓楽器店 西野金陵株式会社 外与 吉徳 ホワイトローズ 小泉産業 増田屋コーポレーション たち吉 ライオン事務器 大石天狗堂 石塚硝子 川島織物 サンゲツ 原島製畳 任天堂 東京ガス 大阪ガス 毎日新聞社 読売新聞グループ本社 朝日新聞社 法藏館 平楽寺書店 永田文昌堂 吉川弘文館 芸艸堂 明治書院 東京書籍 講談社 鮑屋 源田紙業 木津屋本店 モリリン ユアサ商事 岡谷鋼機 国分 ぬ利彦 タキヒヨー 平金商店 長瀬産業 日本紙パルプ商事 三傳商事 伊藤忠商事・丸紅（同根） 蝶理 瀧定名古屋 DKSHジャパン 井澤金属 三田商店 カノークス 川口分店 西川産業 松坂屋 丸栄 永楽屋(手ぬぐい) 白木屋（現東急百貨店） うすい百貨店 鳩居堂 三越 黒江屋 銀座三河屋 大丸 山形屋 岩田屋 岡田屋（現イオングループ） 藤崎 天満屋 そごう 高島屋 千疋屋 祇園辻利 川徳 フレスコキクチ イリグチ 中合 坂口屋 新宿高野 伊勢丹 丸善 ナガハマ 紳士服松崎 名古屋鉄道 東武鉄道 秩父鉄道 西日本鉄道 日本郵船 鈴与 上組 三菱倉庫 三井倉庫 香港上海銀行 七十七銀行 十八銀行 十六銀行 百五銀行 横浜正金銀行（後の東京銀行、現在の三菱東京UFJ銀行） 増田銀行（後の羽後銀行、現在の北都銀行） 明治安田生命保険 朝日生命保険 日本生命保険 第一生命保険 住友生命保険 日新火災海上保険 東京建物 慶雲館 千年の湯 古まん 法師 佐久ホテル 米屋旅館 本陣リゾート 近江屋 若松本店 ホテル イタリア軒 帝国ホテル 大阪屋 THE SAIHOKUKAN HOTEL ホテル小田島 茅ヶ崎館 佐久ホテル 本家 尾張屋 平八茶屋 奥丹清水 粟餅所 澤屋 笹巻けぬきすし総本店 八百善 萬亀楼 更科 野田岩 前川 三定 神田明神前 天野屋 田中屋本店 旅館　大野屋 寿司政 割烹　田中家 日光湯波ふじや 太田なわのれん 嵯峨野竹路庵 新宿高野 甘味処 栖園 キャピタル東洋亭 松本楼 やをよし 崎陽軒 松栄亭 勝利亭 川豊本店 ゼー六 花やしき 古谷製菓 西村食品工業 鶴屋長信 生風庵 胡萩堂 菊水総本店 大黒屋製菓本舗 清水甘酒店 下河原阿月 かねまん 麗人酒造
-  ]# }}}
 
   BLOG_TEXT = [# {{{
     {
@@ -185,3 +175,4 @@ module Faker::CompanyJA
     }
   ]# }}}
 end
+
